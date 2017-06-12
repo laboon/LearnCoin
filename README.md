@@ -1,0 +1,2 @@
+# LearnCoin
+A simple cryptocurrency
