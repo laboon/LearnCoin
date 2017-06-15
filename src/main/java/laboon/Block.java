@@ -9,7 +9,8 @@ public class Block {
     public String prevHash;
 
     public String hash;
-    
+
+    public long _blockNum;
 
     public boolean verify() {
 	// TODO - add
