@@ -7,6 +7,8 @@
  * it.
  */
 
+package laboon;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -22,6 +24,11 @@ public class Sha {
     }
 
     private static MessageDigest _md;
+
+    // Static block - called upon class instantiation
+    // This will set the MessageDigest to use SHA-256
+    // Note that since an exception may be thrown, we cannot just
+    // set _md at the same place we declare it
     
     static {
 	try {
@@ -33,12 +40,12 @@ public class Sha {
 	}
     }
 
-    public byte[] sha256(String toHash) {
+    public static byte[] sha256(String toHash) {
 	return _md.digest(toHash.getBytes(StandardCharsets.UTF_8));
     }
 
-    public String sha256AsString(String toHash) {
-	byte[] hashBytes = this.sha256(toHash);
+    public static String sha256AsString(String toHash) {
+	byte[] hashBytes = sha256(toHash);
 	StringBuilder sb = new StringBuilder();
 	for (byte b : hashBytes) {
 	    sb.append(String.format("%02x", b));
