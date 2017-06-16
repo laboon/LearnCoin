@@ -1,4 +1,4 @@
-package Laboon;
+package laboon;
 
 public class Output {
 

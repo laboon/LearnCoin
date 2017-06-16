@@ -1,19 +1,34 @@
+package laboon;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+
 public class Block {
 
     public long index;
 
     public long timestamp;
 
-    public Transaction[] data;
+    public long confirmations;
 
-    public String prevHash;
+    public long size;
+    
+    public long height;
 
-    public String hash;
+    public BigInteger merkleRoot;
 
-    public long _blockNum;
+    public ArrayList<Transaction> tx;
 
-    public boolean verify() {
-	// TODO - add
-	return true;
-    }
+    public long time;
+
+    public long nonce;
+
+    public BigInteger bits;
+
+    public BigInteger chainwork;
+
+    public BigInteger previousBlockHash;
+
+    public BigInteger nextBlockHash;
+
 }

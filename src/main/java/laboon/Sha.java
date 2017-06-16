@@ -52,5 +52,8 @@ public class Sha {
 	}
 	return sb.toString();
     }
+
+    public static String sha256AsString(BigInteger toHash) {
+    }
     
 }

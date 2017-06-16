@@ -1,5 +1,5 @@
 package laboon;
 
-public Input {
+public class Input {
 
 }

@@ -1,9 +1,25 @@
+package laboon;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+
 public class Transaction {
 
-    public ArrayList<Input> _inputs;
+    public long amount;
 
-    public ArrayList<Output> _outputs;
+    public long confirmations;
 
-    public long _transactionFee; // implied from inputs - outputs
-    
+    public BigInteger txid;
+
+    public long time;
+
+    public long timeReceived;
+
+    public BigInteger account;
+
+    public Address address;
+
+    public TransactionCategory category;
+
+    public long detailAmount;
 }
